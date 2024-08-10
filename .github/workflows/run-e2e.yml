@@ -13,14 +13,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build Application
-        run: npm run build
-
-      - name: Start Application
-        run: npm start &
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
