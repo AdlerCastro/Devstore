@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import CartIcon from '../CartIcon'
 import { SearchForm } from '../Search'
+import { Suspense } from 'react'
 
 export default function Header() {
   return (
@@ -12,8 +13,9 @@ export default function Header() {
             Devstore
           </Link>
         </div>
-
-        <SearchForm />
+        <Suspense fallback={null}>
+          <SearchForm />
+        </Suspense>
       </div>
 
       <div className="flex items-center gap-4">
